@@ -1,12 +1,18 @@
 import 'devextreme/dist/css/dx.common.css';
 import 'devextreme/dist/css/dx.light.css';
-import Vue from 'vue'
+import { createApp } from 'vue'
 import App from './App.vue'
 import store from './store'
 
-Vue.config.productionTip = false
+createApp(App).use(store).mount('#app')
+// import { createApp } from 'vue'
+// import App from './App.vue'
 
-new Vue({
-  store,
-  render: h => h(App)
-}).$mount('#app')
+// const app = createApp(App)
+
+// app.config.isCustomElement = tag => tag.startsWith('app-')
+// app.use(store)
+
+// app.config.globalProperties.customProperty = () => {}
+
+// app.mount(App, '#app')
